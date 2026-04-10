@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+<title>CALCULATOR</title>
+
+<script>
+
+function add() {
+
+var m1=numm1.value;
+var m2=numm2.value;
+
+m1=parseFloat(m1);
+m2=parseFloat(m2);
+
+var add =m1 + m2;
+
+
+num.value=add;
+
+
+}
+
+function sub() {
+
+var m1=numm1.value;
+var m2=numm2.value;
+
+m1=parseFloat(m1);
+m2=parseFloat(m2);
+
+var sub =m1 - m2;
+
+num.value=sub;
+
+}
+
+function mul() {
+
+var m1=numm1.value;
+var m2=numm2.value;
+
+m1=parseFloat(m1);
+m2=parseFloat(m2);
+
+var mul =m1 * m2;
+
+num.value=mul;
+
+}
+
+function div() {
+
+var m1=numm1.value;
+var m2=numm2.value;
+
+m1=parseFloat(m1);
+m2=parseFloat(m2);
+
+var div =m1 / m2;
+
+num.value=div;
+
+}
+
+
+</script>
+
+
+</head>
+
+<table border="1">
+
+
+<tr>
+<td>
+NUMBER-1
+</td>
+<td>
+<input
+type="number" id="numm1" step="any"
+placeholder="0.0"/>
+</td>
+</tr>
+
+<tr>
+<td>
+NUMBER-2
+</td>
+<td>
+<input
+type="number" id="numm2" step="any"
+placeholder="0.0"/>
+</td>
+</tr>
+
+<tr>
+<td>
+RESULT
+</td>
+<td>
+<input
+type="number" id="num"  step="any"
+placeholder="0.0" readonly="readonly" />
+</td>
+</tr>
+
+
+
+<tr>
+    <td colspan="2" align="center">
+        <input type="button" value="c" onclick="location.href='calculator.html';">
+    <input type="button" value="+" onclick="add();">
+    <input type="button" value="-" onclick="sub();">
+    <input type="button" value="*" onclick="mul();">
+    <input type="button" value="/" onclick="div();">
+</td>
+</tr>
+
+</table>

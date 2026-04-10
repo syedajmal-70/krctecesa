@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Employee Salary
+    </title>
+
+    <script>
+
+        function btnfind_onclick(){
+
+            var sal = numSal.value
+            sal = parseFloat(sal);
+            
+            var hra = (sal*20)/100; 
+            var da = (sal*15)/100;
+            var pf = (sal*35)/100;
+            var gpay = hra + da + sal;
+            var npay = gpay - pf;
+
+            numhra.value=hra;
+            numda.value = da;
+            numpf.value = pf;
+            numgpay.value = gpay;
+            numnpay.value = npay;
+
+        }
+    </script>
+</head>
+
+<table border="1" >
+
+    <tr>
+        <td>
+            EID
+        </td>
+        <td>
+            <input type="number" id="numrno" placeholder="0"/>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            EName 
+        </td>
+        <td>
+            <input type="text" id="tbxsname" placeholder="Snow"/>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+           Salary
+        </td>
+        <td>
+            <input type="number" id="numSal" placeholder="0.0" step="any"/>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Da
+        </td>
+        <td>
+            <input type="number" id="numda" placeholder="0.0" step="any" readonly="readonly">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Hra
+        </td>
+        <td>
+            <input type="number" id="numhra" placeholder="0.0" readonly="readonly" step="any">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Pf 
+        </td>
+        <td>
+            <input type="number" id="numpf" placeholder="0.0" readonly="readonly" step="any">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Gpay 
+        </td>
+        <td>
+            <input type="number" id="numgpay" placeholder="0.0" readonly="readonly" step="any">
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            Npay 
+        </td>
+        <td>
+            <input type="number" id="numnpay" placeholder="0.0" readonly="readonly" step="any">
+        </td>
+    </tr>
+
+    
+    <tr>
+        <td>
+            <input type="button" value="cancel" onclick="location.href='wp01.html';">
+        </td>
+        <td>
+            <input type="button" value= 'calculate' onclick="btnfind_onclick();">
+        </td>
+    </tr>
+</table>
